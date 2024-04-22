@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Fcell</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-fluid" id="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="navbar">
+                <!-- icone da pagina -->
+                <a class="navbar-brand" href="index.html"> <span class="icon"><i class="fa-solid fa-mobile-screen-button"></i></span>Fcell</a>
+                <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- navbar conteúdo / textos -->
+                <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Início <span class="sr-only">(página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Carrinho</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Celulares</a>
+                        <a class="dropdown-item" href="#">Computadores</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Teclados</a>
+                        <a class="dropdown-item" href="#">Mouses</a>
+                        <a class="dropdown-item" href="#">Mousepads</a>
+                        <a class="dropdown-item" href="#">Microfones</a>
+                        <a class="dropdown-item" href="#">Headsets</a>
+                        <a class="dropdown-item" href="#">Acessórios</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Sobre</a>
+                    </li>
+                  </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+                    </form>
+                    
+                    <div class="btn-group" id="btn-login-group">
+                      <div class="btn-group dropleft bg-primary" role="group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split bg-primary border border-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="sr-only"></span>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="/src/pages/login.html">Cadastre-se</a>
+                          <!-- Links do menu dropleft -->
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary bg-light border border-white" id="btn-login">
+                        <a href="/src/pages/login.html">Entrar</a>
+                      </button>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <section>
+          <div id="subnavbar">
+            <div class="promos">
+              <ul class="nav nav-pills mb-3 bg-dark" id="pills-tab promos" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Recomendações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Descubra os Melhores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Promoções</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="btn-group dropleft dropdown-filter">
+              <button class="btn-sm btn btn-primary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filtrar
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Menor Preço</a>
+                <a class="dropdown-item" href="#">Maior Preço</a>
+                <a class="dropdown-item" href="#">Mais Avaliados</a>
+                <a class="dropdown-item" href="#">Com mais compras</a>
+              </div>
+            </div>
+            
+            
+            <div class="filter">
+              <p>Busque pelos Melhores</p>
+            </div>
+          </div>
+          
+            <!--Areas de conteudo-->
+
+            
+            <div class="tab-content products-area" id="pills-tabContent">
+
+              <!--carrossel-->
+              <div class="carrossel-div">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="src/imgs/anuncios/anuncio.png" alt="Primeiro Slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="src/imgs/anuncios/anuncio-2.png" alt="Segundo Slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="src/imgs/anuncios/anuncio-3.png" alt="Terceiro Slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                  </a>
+                </div>
+              </div>
+
+              <!--RECOMENDAÇÕES-->
+              <section class="recom">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                  <div class="row">
+
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/s23.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Samsung Galaxy s23 512Gb 6Gb Ram</h5>
+                          <p class="card-text">1.982 Unidades Vendidas</p>
+                          <p class="price-cell">2230,99 <span class="price-cell-2">ou 12x de 290</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-s23">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                            <div class="modal fade" id="modal-s23" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="TituloModalCentralizado">Samsung Galaxy s23</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <img src="src/imgs/cellphones/s23.png" class="img-modal" alt="">
+                                    <div class="description-modal">
+                                      <p>Samsung S23</p>
+                                      <p class="price">2.230 no PIX <span class="pix"><i class="fa-brands fa-pix"></i></span></p>
+                                      <p>ou</p>
+                                      <p class="price">2.999 12x Sem Juros</p>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar e continuar comprando</button>
+                                    <button type="button" class="btn btn-primary">Ir para o carrinho</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/iphone15.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Iphone 15 IOS 17 Câmera de 48MP</h5>
+                          <p class="card-text">4.456 Unidades Vendidas</p>
+                          <p class="price-cell">4890,99 <span class="price-cell-2">ou 12x de 315</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/motorolag84.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Motorola Ag84 512Gb 6Gb Ram</h5>
+                          <p class="card-text">1.003 Unidades Vendidas</p>
+                          <p class="price-cell">3562,99 <span class="price-cell-2">ou 12x de 270</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/oneplus12.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">One Plus 12 Pro 512Gb 6Gb Ram</h5>
+                          <p class="card-text">456 Unidades Vendidas</p>
+                          <p class="price-cell">6592,99 <span class="price-cell-2">ou 12x de 412</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/pocox6pro.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Poco X6 Pro 1024Gb 6Gb Ram</h5>
+                          <p class="card-text">7.596 Unidades Vendidas</p>
+                          <p class="price-cell">1950,99 <span class="price-cell-2">ou 12x de 140</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/rogphone8.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">RogPhone 8 512Gb 6Gb Ram</h5>
+                          <p class="card-text">896 Unidades Vendidas</p>
+                          <p class="price-cell">3650,99 <span class="price-cell-2">ou 12x de 300</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/redminote13pro.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Redmi Note 13 Pro 512Gb 6Gb Ram</h5>
+                          <p class="card-text">10.785 Unidades Vendidas</p>
+                          <p class="price-cell">4510,99 <span class="price-cell-2">ou 12x de 360</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/vivov30pro.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">VIVO 30 Pro 512Gb 6Gb Ram</h5>
+                          <p class="card-text">5.656 Unidades Vendidas</p>
+                          <p class="price-cell">6541,99 <span class="price-cell-2">ou 12x de 510</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/vivoiqoo12.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">VIVO IQOO 12 512Gb 6Gb Ram</h5>
+                          <p class="card-text">162 Unidades Vendidas</p>
+                          <p class="price-cell">6592,99 <span class="price-cell-2">ou 12x de 470</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/redmagic9pro.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">RedMagic 9 Pro 512Gb 6Gb Ram</h5>
+                          <p class="card-text">8.562 Unidades Vendidas</p>
+                          <p class="price-cell">3650,99 <span class="price-cell-2">ou 12x de 300</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/googlepixel.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Google Pixel 8 pro 512Gb 6Gb Ram</h5>
+                          <p class="card-text">567 Unidades Vendidas</p>
+                          <p class="price-cell">3140,99 <span class="price-cell-2">ou 12x de 270</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-s">
+                      <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="src/imgs/cellphones/blackshark.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                          <h5 class="card-title">Black Shark 512Gb 12Gb Ram</h5>
+                          <p class="card-text">189 Unidades Vendidas</p>
+                          <p class="price-cell">5410,99 <span class="price-cell-2">ou 12x de 460</span></p>
+                          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Adicionar ao Carrinho <span class="icon-2"><i class="fa-solid fa-cart-shopping"></i></span>
+                            
+                            <!--Modal-->
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+            
+              <!--DESCUBRA OS MELHORES-->
+              <section class="best-sellers">
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                  
+
+                </div>
+              </section>
+              
+            <!--PROMOÇÕES-->
+              <section class="promos">
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+
+                </div>
+              </section>
+            </div>
+        </section>
+
+
+        <footer>
+          <p>&copy; Fcell 2024. Todos os Direitos Reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

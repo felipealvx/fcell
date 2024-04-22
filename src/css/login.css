@@ -1,0 +1,24 @@
+.container-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nb-fluid {
+    margin-top: 2.25rem;
+}
+
+.btn-login {
+    width: 100%;
+    margin-bottom: 0.675rem;
+}
+
+.btn-login-google {
+    width: 100%;
+}
+
+.rem-pass {
+    text-align: center;
+    margin-block: 0.675rem;
+
+}
